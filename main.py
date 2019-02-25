@@ -43,7 +43,7 @@ flags.DEFINE_integer(
 flags.DEFINE_integer('feed_length', 3, 'length of days to feed')
 flags.DEFINE_string(
     'logdir',
-    '/Users/xander/Documents/StudyDocument/Lab/maml/MyCoding5/tmp/data',
+    '',
     'directory for summaries and checkpoints.')
 flags.DEFINE_integer('test_iter', -1, 'iteration to load model (-1 for latest model)')
 flags.DEFINE_boolean('resume', False,'resume or not')
