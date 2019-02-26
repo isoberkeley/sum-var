@@ -136,8 +136,9 @@ def test(model, sess, exp_string, data_generator):
         input_tensors = [model.metatrain_op,model.total_losses2[FLAGS.num_updates - 1]]
         #input_tensors = [model.total_losses2[FLAGS.num_updates - 1]]
         result = sess.run(input_tensors, feed_dict)
-        print(result[-1])
+      
         if itr > 0.9*(data_generator.num_samples_per_class - FLAGS.feed_length - 2):
+            print('validation: ',result[-1])
             metaval_accuracies.append(result[-1])
     metaval_accuracies = np.array(metaval_accuracies)
     means = np.mean(metaval_accuracies, 0)
