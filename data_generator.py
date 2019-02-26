@@ -28,10 +28,8 @@ class DataGenerator(object):
                 row_list = context.split("\n")
                 # the number of rows in data(each row indicate an indicator in
                 # one place)
-                print(row_list)
                 #row_list.pop()
                 num_rows = len(row_list)
-                print(num_rows)
                 # the rows of data must be integral multiple of indicators
                 assert num_rows % self.num_indicators is 0
                 self.batch_size = int(num_rows / self.num_indicators)
